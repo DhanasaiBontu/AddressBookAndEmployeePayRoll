@@ -21,6 +21,9 @@ public class AddressBookMain {
         addressBook.editContact("John");
         addressBook.displayContacts();
 
+        addressBook.deleteContact("John");
+        addressBook.displayContacts();
+
     }
 
 }
