@@ -14,5 +14,9 @@ public class AddressBookMain {
         );
 
         person.displayContact();
+        AddressBook addressBook = new AddressBook();
+        addressBook.addContact();
+        addressBook.displayContacts();
     }
+
 }
