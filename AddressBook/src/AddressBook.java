@@ -45,4 +45,21 @@ public class AddressBook {
             System.out.println("-------------------");
         }
     }
+
+    public void editContact(String firstName) {
+        for (Contact contact : contacts) {
+            if (contact.firstName.equalsIgnoreCase(firstName)) {
+                System.out.print("Enter new City: ");
+                contact.city = scanner.nextLine();
+
+                System.out.print("Enter new Phone Number: ");
+                contact.phoneNumber = scanner.nextLine();
+
+                System.out.println("Contact updated successfully!");
+                return;
+            }
+        }
+        System.out.println("Contact not found!");
+    }
+
 }

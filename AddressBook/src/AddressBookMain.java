@@ -17,6 +17,10 @@ public class AddressBookMain {
         AddressBook addressBook = new AddressBook();
         addressBook.addContact();
         addressBook.displayContacts();
+
+        addressBook.editContact("John");
+        addressBook.displayContacts();
+
     }
 
 }
