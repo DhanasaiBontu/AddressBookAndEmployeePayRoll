@@ -1,14 +1,21 @@
 public class EmployeePayrollMain {
 
-    public static void main(String[] args) {
+    // UC7: Class Variables (Constants)
+    static final int IS_FULL_TIME = 1;
+    static final int IS_PART_TIME = 2;
+    static final int EMP_RATE_PER_HOUR = 20;
+    static final int MAX_WORKING_DAYS = 20;
+    static final int MAX_WORKING_HOURS = 100;
 
+    public static void main(String[] args) {
         System.out.println("Welcome to Employee Wage Computation Program");
 
-        int IS_FULL_TIME = 1;
-        int IS_PART_TIME = 2;
-        int EMP_RATE_PER_HOUR = 20;
-        int MAX_WORKING_DAYS = 20;
-        int MAX_WORKING_HOURS = 100;
+        // UC7: Call class method
+        computeEmployeeWage();
+    }
+
+    // UC7: Class Method
+    public static void computeEmployeeWage() {
 
         int totalEmpHrs = 0;
         int totalWorkingDays = 0;
