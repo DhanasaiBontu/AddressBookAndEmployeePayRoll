@@ -7,29 +7,35 @@ public class EmployeePayrollMain {
         int IS_FULL_TIME = 1;
         int IS_PART_TIME = 2;
         int EMP_RATE_PER_HOUR = 20;
+        int NUM_OF_WORKING_DAYS = 20;
 
         int empHrs = 0;
-        int empWage = 0;
+        int totalEmpWage = 0;
 
-        int empCheck = (int) Math.floor(Math.random() * 3);
+        for (int day = 1; day <= NUM_OF_WORKING_DAYS; day++) {
 
-        switch (empCheck) {
-            case IS_FULL_TIME:
-                empHrs = 8;
-                System.out.println("Employee is Full Time");
-                break;
+            int empCheck = (int) Math.floor(Math.random() * 3);
 
-            case IS_PART_TIME:
-                empHrs = 4;
-                System.out.println("Employee is Part Time");
-                break;
+            switch (empCheck) {
+                case IS_FULL_TIME:
+                    empHrs = 8;
+                    System.out.println("Day " + day + ": Employee is Full Time");
+                    break;
 
-            default:
-                empHrs = 0;
-                System.out.println("Employee is Absent");
+                case IS_PART_TIME:
+                    empHrs = 4;
+                    System.out.println("Day " + day + ": Employee is Part Time");
+                    break;
+
+                default:
+                    empHrs = 0;
+                    System.out.println("Day " + day + ": Employee is Absent");
+            }
+
+            int dailyWage = empHrs * EMP_RATE_PER_HOUR;
+            totalEmpWage += dailyWage;
         }
 
-        empWage = empHrs * EMP_RATE_PER_HOUR;
-        System.out.println("Employee Wage: " + empWage);
+        System.out.println("Total Employee Wage for Month: " + totalEmpWage);
     }
 }
